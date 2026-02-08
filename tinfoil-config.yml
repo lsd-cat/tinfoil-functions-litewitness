@@ -1,33 +1,21 @@
-# Tinfoil Function Configuration
-# This file will be auto-populated when you deploy via the Tinfoil dashboard.
-# You can also edit it manually - see docs at https://docs.tinfoil.sh/functions/config
-#
-# After creating this repo from the template:
-# 1. Go to https://dash.tinfoil.sh and create a new function
-# 2. Provide this repository URL and your container details
-# 3. This file will be automatically updated with your deployment settings
-#
-# For updates: edit this file, commit, and push a new tag (e.g., v2)
-
 shim-version: v0.3.12@sha256:b81f2295ae6750d61e94f810ce24077360001b6ec795d13643f3170df29e304d
-cvm-version: 0.6.6
+cvm-version: 0.6.3
 cpus: 2
 memory: 8192
 
-# Container configuration
-# Note: image must include SHA256 hash (e.g., image:tag@sha256:abc123...)
 containers:
   - name: "app"
-    image: "ubuntu:24.04@sha256:a4453623f2f8319cfff65c43da9be80fe83b1a7ce689579b475867d69495b782"
+    image: "ghcr.io/tanyav2/simple-container-private:latest@sha256:d699a189a47c0cabfe42f89f41bc99e4d7c43ba47c4efca8b3ec5df4a991510d"
     env:
-      - LOG_LEVEL=info
+      - APP_NAME=tinfoil-test-app"
+      - LOG_LEVEL=debug"
+      - MAX_TOKENS=100"
     secrets:
-      - API_KEY
-    command: ["--port", "8000"]
+      - TINFOIL_API_KEY
 
-# Shim configuration (adjust upstream-port and paths to match your container)
 shim:
   listen-port: 443
   upstream-port: 8000
   paths:
     - /health
+    - /chat
