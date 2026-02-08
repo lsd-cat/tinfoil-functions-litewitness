@@ -20,7 +20,7 @@ containers:
   - name: "app"
     image: "your-image:tag@sha256:..."
     env:
-      - LOG_LEVEL: "info"
+      - LOG_LEVEL=info
     secrets:
       - API_KEY
     command: ["--port", "8000"]
