@@ -18,7 +18,7 @@ memory: 8192
 # Note: image must include SHA256 hash (e.g., image:tag@sha256:abc123...)
 containers:
   - name: "app"
-    image: "your-image:tag@sha256:..."
+    image: "ubuntu:24.04@sha256:a4453623f2f8319cfff65c43da9be80fe83b1a7ce689579b475867d69495b782"
     env:
       - LOG_LEVEL=info
     secrets:
