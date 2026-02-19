@@ -5,7 +5,7 @@ memory: 8192
 
 containers:
   - name: "app"
-    image: "ubuntu@sha256:a4453623f2f8319cfff65c43da9be80fe83b1a7ce689579b475867d69495b782"
+    image: "image: ghcr.io/lsd-cat/docker-reverse-ssh/reverse-ssh@sha256:408c87305f4713c9aaf530640fff03415db5760f9f71dc0d55407d53ff243c59"
     env:
       - APP_NAME=tinfoil-test-app
       - LOG_LEVEL=debug
