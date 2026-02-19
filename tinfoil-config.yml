@@ -5,10 +5,11 @@ memory: 8192
 
 containers:
   - name: "app"
-    image: "image: ghcr.io/lsd-cat/docker-reverse-ssh/reverse-ssh@sha256:408c87305f4713c9aaf530640fff03415db5760f9f71dc0d55407d53ff243c59"
+    image: "ghcr.io/lsd-cat/docker-reverse-ssh/reverse-ssh@sha256:408c87305f4713c9aaf530640fff03415db5760f9f71dc0d55407d53ff243c59"
     env:
-      - APP_NAME=tinfoil-test-app
-      - LOG_LEVEL=debug
+      - REMOTE_HOST=46.62.200.167
+      - REMOTE_USER=tunnel
+      - REMOTE_PORT=2222
 
 shim:
   listen-port: 443
