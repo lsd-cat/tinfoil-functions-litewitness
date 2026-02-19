@@ -5,7 +5,7 @@ memory: 8192
 
 containers:
   - name: "app"
-    image: "ghcr.io/lsd-cat/docker-reverse-ssh/reverse-ssh@sha256:408c87305f4713c9aaf530640fff03415db5760f9f71dc0d55407d53ff243c59"
+    image: "ghcr.io/lsd-cat/docker-reverse-ssh/reverse-ssh@sha256:10d865ccb9b0c35f26d8e31df8be8f5f959f08856b08d68e7ba2835183976f2b"
     env:
       - REMOTE_HOST=46.62.200.167
       - REMOTE_USER=tunnel
